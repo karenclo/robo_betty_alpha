@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('DashboardFormBuilderModule')
-  .controller('FormCreateController', function ($scope, $modal, FormService) {
+  .controller('FormCreateController', function ($scope, $http, $modal, FormService) {
 
   // preview form mode
   $scope.previewMode = false;
@@ -43,6 +43,25 @@ angular.module('DashboardFormBuilderModule')
     $scope.form.form_fields.push(newField);
   };
 
+  // posts form template as Json
+  $scope.postJson = function (){
+    // object of this form template
+    var dataObj = { 
+      form_id : $scope.form.form_id,
+      form_name : $scope.form.form_name,
+      form_fields : $scope.form.form_fields
+    };
+    
+    var res = $http.post('api/form/template', dataObj);
+    
+    res.success(function(data, status, headers, config) {
+      $scope.message = data;
+    });
+    res.error(function(data, status, headers, config) {
+      alert( "failure message: " + JSON.stringify({data: data}));
+    });	
+  }    
+    
   // deletes particular field on button click
   $scope.deleteField = function (field_id){
     for(var i = 0; i < $scope.form.form_fields.length; i++){

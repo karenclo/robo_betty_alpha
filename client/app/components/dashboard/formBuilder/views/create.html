@@ -99,21 +99,10 @@
         </accordion>
 
         <p class="text-center">
+            <button class="btn btn-primary right" type="button" ng-click="postJson()"><i class="icon-eye-open icon-white"></i> Submit Form</button>
             <button class="btn btn-primary right" type="button" ng-click="previewOn()"><i class="icon-eye-open icon-white"></i> Preview Form</button>
             <button class="btn btn-danger right" type="button" ng-click="reset()"><i class="icon-refresh icon-white"></i> Reset</button>
         </p>
-
-        <br><hr>
-
-		<div class="text-center">
-			<a class="btn btn-small btn-primary" ng-show="!showJson" ng-click="showJson = true">Show form json object</a>
-			<a class="btn btn-small btn-inverse" ng-show="showJson" ng-click="showJson = false">Hide form json object</a><br><br>
-		</div>
-
-        <div ng-show="showJson">
-            <h4>Form object content:</h4>
-            <pre>{{ form | json }}</pre>
-        </div>
     </div>
 
     <div class="form-fields-preview" ng-show="previewMode">
