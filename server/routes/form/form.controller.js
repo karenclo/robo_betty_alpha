@@ -11,9 +11,9 @@ var mongoose = require('mongoose');
 var TemplateForm = require('../../models/form/FormTemplate');
 
 /********** FORM TEMPLATE ROUTES **********/
-exports.template = {};
+module.exports.template = {};
 
-exports.template.findById =  function(req, res) {
+module.exports.template.findById =  function(req, res) {
   TemplateForm.findOne({'_id' : req.params.id}, function(err, template) {
     if(err)
       res.status(400).json({error: "There was an error finding the template form."});
@@ -23,7 +23,7 @@ exports.template.findById =  function(req, res) {
 };
 
 
-exports.template.findByCompanyId =  function(req, res) {
+module.exports.template.findByCompanyId =  function(req, res) {
   TemplateForm.findOne({'_admin_id' : req.params.id}, function(err, template) {
     if(err)
       res.status(400).json({error: "There was an error finding the template form."});
@@ -32,7 +32,7 @@ exports.template.findByCompanyId =  function(req, res) {
   });
 };
 
-exports.template.create =  function(req, res) {
+module.exports.template.create =  function(req, res) {
   var newTemplate = new TemplateForm();
   newTemplate._admin_id = new mongoose.Types.ObjectId(req.body._admin_id);
   newTemplate.template = req.body.template;
@@ -46,7 +46,7 @@ exports.template.create =  function(req, res) {
 };
 
 /* Accept PUT request at /form/template */
-exports.template.update =  function(req, res) {
+module.exports.template.update =  function(req, res) {
     var update = {template: req.body.template};
     var options = {new: true};
 
@@ -60,7 +60,7 @@ exports.template.update =  function(req, res) {
 };
 
 /* accept DELETE request at /form/template/:template_id */
-exports.template.delete =  function (req, res) {
+module.exports.template.delete =  function (req, res) {
     /* Get id param from request */
     var templateID = req.params.template_id;
 
@@ -79,9 +79,9 @@ exports.template.delete =  function (req, res) {
 };
 
 /********** PATIENT FORM ROUTES **********/
-exports.submitted_form = {};
+module.exports.submitted_form = {};
 
-exports.submitted_form.findById = function(req, res) {
+module.exports.submitted_form.findById = function(req, res) {
   SubmittedForm.findOne({ '_id': req.params.form_id }, function (err, submittedForm) {
     if (err) {
       res.status(400).json({error: "An error occured while finding patient form"});
@@ -91,7 +91,7 @@ exports.submitted_form.findById = function(req, res) {
   });
 };
 
-exports.submitted_form.create = function(req, res) {
+module.exports.submitted_form.create = function(req, res) {
   var form = new SubmittedForm();
   form.form = req.body.form;
   form._admin_id = req.body._admin_id;
@@ -107,7 +107,7 @@ exports.submitted_form.create = function(req, res) {
   });
 };
 
-exports.submitted_form.findByCompanyId = function(req, res) {
+module.exports.submitted_form.findByCompanyId = function(req, res) {
   var query = {},
     firstName = req.query.firstName,
     lastName = req.query.lastName,

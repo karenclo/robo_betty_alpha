@@ -1,0 +1,55 @@
+.nav {
+	background-color: #56a6ff;
+	height: 70px;
+	padding-right: 700px;
+	padding-top: 10px;
+}
+
+.signup {
+	background-color: #f7f7f7;
+	height: 500px;
+	width: 700px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #e8e8e8;
+	position: relative;
+	margin: auto;
+	top: 175px;
+}
+
+.signupform  {
+	text-align: right;
+	padding-right: 150px;
+	font-size: 20px;
+	padding-bottom: 30px;
+	font-weight: strong;
+
+}
+
+.formfield {
+	padding: 15px;
+
+}
+
+.button{
+	border-radius: 5px;
+	border: 2px solid #6495ed;
+	background-color: #5085bb;
+	width: 100px;
+	height: 50px;
+	margin-top: 10px;
+	margin-left: 280px;
+	text-align: center;
+	right: 50px;
+
+}
+
+.button a{
+	text-decoration: none;
+	color: white;
+
+}
+
+.arrowbutton {
+
+}

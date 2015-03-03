@@ -55,5 +55,32 @@ router.post('/login', function(req, res) {
   });
 });
 
+router.put("/setting/:user", function(req, res) {
+   Authmodel.findOne({email: req.params.user}, function (err, admin) {
+      if(err || !admin)
+         res.json(err);
+ 	
+     
+     // if the user is found but the password is wrong
+     if(!admin.validPassword(req.body.password))
+       return res.status(401).send('loginMessage', 'Oops! Wrong password');
+	 //update password
+	
+	 //upadate password
+	 if (req.body.newpassword !== undefined)
+	 	admin.password = admin.generateHash(req.body.newpassword);
+	
+	//update email
+	 if (req.body.newemail !== undefined)
+		 admin.email = req.body.newemail;
+      admin.save(function(err) {
+        if(err) {
+          res.json(err);
+        }
+      });
+      return res.sendStatus(200);
+   });
+});
+
 
 module.exports = router;

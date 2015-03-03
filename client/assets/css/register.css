@@ -1,0 +1,81 @@
+#error_message{
+	width: 100%;
+	color: red;
+	font-style: italic;
+	font-size: 14px;
+	text-align: right;
+	padding-right: 35px;
+}
+.navi {
+	background: #2B76A0;
+	height: 40px;
+	width:100%;
+}
+.signup {
+	background-color: #f7f7f7;
+	height: 550px;
+	width: 650px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #e8e8e8;
+	position: relative;
+	margin: auto;
+	margin-top: -10px;
+	margin-bottom: 70px;
+	top: 175px;
+}
+
+.signupform  {
+	text-align: right;
+	padding-right: 170px;
+	font-size: 20px;
+	padding-bottom: 30px;
+	font-weight: strong;
+
+}
+.formfield {
+	padding: 15px;
+
+}
+
+input[type=submit] {
+	float: center;
+	margin-left: 26px;
+	margin-top: 10px;
+	width: 303px;
+	height: 50px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3D8CC4), to(#3D8CC4));
+	background-image: -moz-linear-gradient(top left 90deg, #3D8CC4 0%, #3D8CC4 100%);
+	background-image: linear-gradient(top left 90deg, #3D8CC4 0%, #3D8CC4 100%);
+	border-radius: 20px;
+	border: 1px solid #3D8CD5;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+.button{
+	border-radius: 5px;
+	border: 2px solid #6495ed;
+	background-color: #5085bb;
+	width: 100px;
+	height: 50px;
+	margin-top: 10px;
+	margin-left: 280px;
+	text-align: center;
+	right: 50px;
+
+}
+
+.button a{
+	text-decoration: none;
+	color: white;
+
+}
+h1{
+	text-align: center;
+}
+.arrowContainer{
+align:left;
+}

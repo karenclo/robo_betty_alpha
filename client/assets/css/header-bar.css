@@ -1,0 +1,140 @@
+/* Created by: Mandy , Delia
+ * Navigation bar stylesheet
+ */
+ #navigation{
+  background:#434343;
+  border-radius:0%;
+  border:0px;
+  margin-bottom:0;
+  max-height: 50px;
+}
+
+.navbar .nav > li > a:link {
+ color: #FFFFFF; 
+ text-decoration: none;
+}
+.navbar .nav > li > a:hover {
+ color: #FFFFFF; 
+ text-decoration: none;
+}
+
+.navbar .nav > li > button > a:hover {
+ color: #FFFFFF; 
+ text-decoration: none;
+}
+
+.navbar#navigation {
+  border-bottom: 5px solid #e99d1a;
+
+}
+
+
+ul.topbar-right {
+  float:right;
+  margin-top:0px;
+  margin-bottom:0px;
+  padding:0px;
+  height:50px;
+}
+
+ul.topbar-right li {
+  color:#f7f7f7;
+  text-decoration: none;
+  list-style-type: none;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+ul.topbar-right li a{
+  padding: 5 0 5 0;
+  color:#f7f7f7;
+  text-decoration: none;
+  list-style-type:none;
+  line-height: 50px;
+  height: 50px;
+}
+
+/*span.vertical-align {
+  display: table-cell;
+  vertical-align: middle;
+}*/
+
+ul.topbar-right li:hover {
+  color:#f7f7f7;
+  /*border-top: 3px solid #e99d1a;*/
+  background-color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+
+.navbar-icon{
+  width:56px;
+  height:50px;
+  background-image: url("../../../../images/logo.png");
+  background-size: 100%;
+}
+
+/*
+
+html,body{
+margin:0;
+padding:0;
+background:#fff;
+}
+
+a {
+color:white;
+text-decoration:none;
+}
+
+.active a{
+color:#ef8e48;
+}
+
+
+
+/******************************************
+**************** Nav Bar ******************
+******************************************/
+#nav-top{
+  height:150px;
+  background:#434343;
+  width:100%;
+  position:relative;
+}
+
+.nav-right{
+  float:right;
+  width:80%;
+  margin-top:30px;
+}
+
+.nav-icon{
+  float:right;
+  display:block;
+  margin-right:7%;
+  font-size:xx-large; 
+}
+
+.orange{
+  width:100%;
+  position:absolute;
+  background:#ef8e48;
+  padding:15px;
+  bottom:0px;
+}
+
+#triangle-up { 
+  width: 0; 
+  height: 0; 
+  border-left: 30px solid transparent; 
+  border-right: 30px solid transparent; 
+  border-bottom: 30px solid #ef8e48; 
+  position:absolute;
+  left:26%;
+  bottom:30px;
+}
+
+
+/******************************************
+**************** Nav Bar ******************
+******************************************/

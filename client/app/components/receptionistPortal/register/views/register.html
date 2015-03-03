@@ -1,0 +1,50 @@
+<head>
+	<link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/register.css" rel="stylesheet" />
+
+</head>	
+
+<body ng-app="register">
+	<div class="main" ng-controller="RegisterController as regCTRL">
+		<div class="navi">
+			<div class="arrowContainer">
+				<div class="arrowbutton">
+					<a href="#/signin"><img src="images/back.png" /></a>
+				</div>
+			</div>
+		</div>
+		<div class="signup">
+			<h1>Sign Up Form</h1>
+			<div class="signupform">
+				<form ng-submit="reg()">
+					<div class="formfield">
+						<b>Name</b> <input type="name" placeholder="Company Name">
+					</div>
+					<div class="formfield">
+						<b>Email</b> <input type="Email" placeholder="Email" ng-model="user.email">
+					</div>
+					<div class="formfield">
+						<b>Password</b>  <input type="password" placeholder="Password" ng-model="user.password">
+					</div>
+
+					<div class="formfield">
+						<b>Confirm Password</b> <input type="password" placeholder="Confirm Password" ng-model="pass">
+					</div>
+
+					<div class="formfield">
+						<b>Business</b> <input type="buisness" placeholder="Business Name">
+					</div>
+					<div class="formfield">
+						<b>Phone</b> <input type="phone" placeholder="Company Name">
+					</div>
+					
+						<p id="error_message">{{errorMessage}}</p>
+						<input type="submit" Value="Submit"></a>
+					
+				</form>
+			</div>
+		</div>
+  </div>
+
+  <themeChoice></themeChoice>
+</body>

@@ -12,7 +12,19 @@
   <!-- endbower -->
 
   <!-- THIS WILL WHERE WE WILL FILL IN OUR SCRIPTS AND STYLE SHEETS-->
+  <!--<link rel="stylesheet" href="css/style.css"/>-->
+  <link rel="stylesheet" href="css/header-bar.css"/>
+  <link rel="stylesheet" href="css/sidebar.css"/>
+  <link rel="stylesheet" href="css/doctors.css"/>
+  <link rel="stylesheet" href="css/fonts.css"/>
+
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+  <!-- Animate Triangle --
+  <script src="js/animateIcon.js"></script>-->
+
   <link rel="stylesheet" href="css/style.css"/>
+   <script src="client/app/components/dashboard/themeChoice/directives/themeChoice.js"></script>
   <script src="bundle.js"></script>
 
 </head>
@@ -20,15 +32,12 @@
 
 <body ng-app="robobetty">
 
-<nav-bar></nav-bar>
 
 <!-- MAIN CONTENT -->
-<div class="container">
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT -->
+<div ui-view=""></div>
+<!-- <div class="container-fluid"> -->
 
-  <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT -->
-  <div ui-view></div>
-
-</div>
 
 </body>
 </html>
